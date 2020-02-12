@@ -11,12 +11,12 @@ class UpdaterDataTest
     public function main()
     {
         try {
-            $updater = new UpdaterData("/media/ana/Datos/geo-timezone/data/");
+            $updater = new UpdaterData(__DIR__.'/../../data/');
             $updater->updateData();
         } catch (\ErrorException $error) {
             echo $error->getMessage();
         }
-        
+
     }
 }
 
